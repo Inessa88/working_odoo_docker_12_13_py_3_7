@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to running container",
+            "type": "python",
+            "request": "attach",
+            "pathMappings": [{
+                "localRoot": "${workspaceRoot}",
+                "remoteRoot": "/opt/odoo/odoo12"
+            }],
+            "port": 6899,
+            "host": "localhost"
+        }
+    ]
+}

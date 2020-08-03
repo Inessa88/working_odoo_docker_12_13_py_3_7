@@ -1,0 +1,114 @@
+version: "3.4"
+
+x-odoo: &default-odoo
+  restart: always
+  tty: true
+  build:
+    context: .
+    dockerfile: Dockerfile
+  environment:
+    - DB_HOST=db
+    - DB_PORT=5432
+    - DB_USER=odoo
+    - DB_PASSWORD=odoo
+    - LONGPOLLING_PORT=8072
+    - PROJECT_PATH=/opt/odoo/odoo12
+  volumes:
+    - odoo-data:/opt/odoo/.local/share/Odoo
+    - ./vendor:/opt/odoo/odoo12/vendor
+    - ./src:/opt/odoo/odoo12/src
+    - ./odoo12/odoo.conf:/opt/odoo/odoo12/odoo.conf
+
+volumes:
+  db-data:
+  odoo-data:
+
+networks:
+  default: { internal: false }
+  public: null
+
+services:
+  db:
+    image: postgres:11
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
+    ports:
+      - "5436:5432"
+    networks: { default: null, public: null }
+
+  proxy:
+    image: envoyproxy/envoy-alpine:v1.14.1
+    networks:
+      default:
+        aliases:
+          - cdnjs.cloudflare.com
+      public: null
+
+    ports:
+      - "80:80"
+      - "9901:9901"
+      - "6899:6899"
+    volumes: ["./scripts/envoy.yaml:/etc/envoy/envoy.yaml"]
+
+  # http://mail.localhost
+  smtpfake: { image: mailhog/mailhog }
+
+  # http://odoo.localhost/longpolling/
+  odoo-longpolling:
+    <<: *default-odoo
+    entrypoint: ["/entrypoint.sh"]
+    command: ["gevent", "--dev", "reload,qweb,werkzeug,xml"]
+    depends_on: ["db", "proxy"]
+
+  # http://odoo.localhost
+  odoo:
+    <<: *default-odoo
+    entrypoint: ["/entrypoint.sh"]
+    command: ["--dev", "reload,qweb,werkzeug,xml"]
+    depends_on: ["db", "proxy", "odoo-longpolling", "smtpfake"]
+
+  # http://odoo.localhost
+  odoo-ptvsd:
+    <<: *default-odoo
+    entrypoint: ["/entrypoint.sh"]
+    command: ["ptvsd", "--dev", "werkzeug"]
+    depends_on: ["db", "proxy", "smtpfake"]
+
+  tests:
+    <<: *default-odoo
+    depends_on: ["db", "proxy"]
+    entrypoint:
+      [
+        "/entrypoint.sh",
+        "--dev",
+        "qweb,werkzeug,xml",
+        "--test-enable",
+        "--stop-after-init",
+        "--workers 0",
+      ]
+    command: []
+
+  tests-ptvsd:
+    <<: *default-odoo
+    depends_on: ["db", "proxy"]
+    entrypoint:
+      [
+        "/entrypoint.sh",
+        "ptvsd",
+        "--dev",
+        "qweb,werkzeug,xml",
+        "--test-enable",
+        "--stop-after-init",
+        "--workers 0",
+      ]
+
+    # if you want debugging test - uncomment next line and insert name of db to second parameter and name of module to 4th
+    # for run: docker-compose up tests-ptvsd
+    # after dont forget stop and remove container
+
+    command: ["-d", "test2", "-u", "product_interest_hme"]
