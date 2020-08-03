@@ -16,3 +16,5 @@ ctrl + c
 docker-compose up odoo-ptvsd
 
 Start debagger in VScode (button)
+
+Open in browser: odoo.localhost
