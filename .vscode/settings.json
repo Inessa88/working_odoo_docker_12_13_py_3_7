@@ -3,4 +3,9 @@
     "python.envFile": "${workspaceFolder}/.env",
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
+    "files.watcherExclude": {
+
+        "${workspaceFolder}/vendor/**": true,
+
+      }
 }

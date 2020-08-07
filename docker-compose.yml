@@ -111,4 +111,4 @@ services:
     # for run: docker-compose up tests-ptvsd
     # after dont forget stop and remove container
 
-    command: ["-d", "test2", "-u", "product_interest_hme"]
+    command: ["-d", "origin", "-u", "my_library"]

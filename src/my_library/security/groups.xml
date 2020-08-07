@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="group_librarian" model="res.groups">
-        <field name="name">Librarians</field>
-        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+    <record id="module_library_category" model="res.groups">
+        <field name="name">Library</field>
+    </record>
+    <record id="library_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id"
+                ref="module_library_category"/>
+        <field name="implied_ids"
+                eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="library_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id"
+                ref="module_library_category"/>
+        <field name="implied_ids"
+                eval="[(4, ref('library_group_user'))]"/>
+        <field name="users"
+                eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
     </record>
 </odoo>
