@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import models, fields
 
 
 class LibraryBook(models.Model):
@@ -9,8 +9,3 @@ class LibraryBook(models.Model):
     name = fields.Char('Title', required=True)
     date_release = fields.Date('Release Date')
     author_ids = fields.Many2many('res.partner', string='Authors')
-
-    @api.multi
-    def write(self, vals):
-        res = super().write(vals)
-        return res
