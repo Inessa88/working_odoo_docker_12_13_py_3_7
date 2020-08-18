@@ -11,3 +11,4 @@ class LibraryBook(models.Model):
     author_ids = fields.Many2many('res.partner', string='Authors')
     image = fields.Binary(attachment=True)
     html_description = fields.Html()
+    book_issue_id = fields.One2many('book.issue', 'book_id')
