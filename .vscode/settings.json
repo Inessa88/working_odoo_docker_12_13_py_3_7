@@ -1,6 +1,11 @@
 {
-    "python.pythonPath": "/usr/bin/python3.7",
+    "python.pythonPath": "/usr/bin/python3",
     "python.envFile": "${workspaceFolder}/.env",
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
+    "files.watcherExclude": {
+
+        "${workspaceFolder}/vendor/**": true,
+
+      }
 }
