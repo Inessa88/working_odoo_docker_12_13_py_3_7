@@ -1,19 +1,22 @@
 from odoo import http
 from odoo.http import request
-
+import werkzeug
 
 class Main(http.Controller):
     @http.route('/books', type='http', auth="user", website=True)
-    def library_books(self, *args, **kwargs):
+    def library_books(self, **post):
+        domain = request.website.website_domain()
         return request.render(
             'my_library.books', {
                 'books':
-                request.env['library.book'].search([]),
+                request.env['library.book'].search(domain),
             }
         )
 
     @http.route('/books/<model("library.book"):book>', type='http', auth="user", website=True)
-    def library_book_detail(self, book, *args, **kwargs):
+    def library_book_detail(self, book, **post):
+        if not book.can_access_from_current_website():
+            raise werkzeug.exceptions.NotFound()
         return request.render(
             'my_library.book_detail', {
             'book': book,
