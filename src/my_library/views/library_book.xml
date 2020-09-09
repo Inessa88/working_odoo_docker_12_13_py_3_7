@@ -5,7 +5,7 @@
         <field name="name">Library Books</field>
         <field name="res_model">library.book</field>
         <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,m2m_group,form</field>
     </record>
 
     <menuitem name="My Library" id="library_base_menu" />
@@ -17,15 +17,18 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form>
-                <group>
+                <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="author_ids" widget="many2many_tags"/>
+                        <group>
+                            <field name="name"/>
+                            <field name="author_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="date_release"/>
+                            <field name="color" widget="int_color"/>
+                        </group>
                     </group>
-                    <group>
-                        <field name="date_published"/>
-                    </group>
-                </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -37,8 +40,16 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="date_published"/>
+                <field name="date_release"/>
             </tree>
+        </field>
+    </record>
+
+    <record id="library_book_view_author" model="ir.ui.view">
+        <field name="name">Library Book Author</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <m2m_group m2m_field="author_ids" color_field="color"> </m2m_group>
         </field>
     </record>
 
