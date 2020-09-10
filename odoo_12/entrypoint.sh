@@ -18,7 +18,7 @@ if [ "$#" -eq 0 ] || [ "${1:0:1}" = '-' ]; then
 fi
 
 CMD=( "$@" )
-ODOO_CMD=("/opt/odoo/odoo12/vendor/odoo/cc/odoo/odoo-bin")
+ODOO_CMD=("/opt/odoo/odoo12/vendor/odoo/cc/odoo-bin")
 SETTINGS=(
     "--config"
     "/opt/odoo/odoo12/odoo.conf"
