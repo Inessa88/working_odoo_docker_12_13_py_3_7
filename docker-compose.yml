@@ -107,8 +107,9 @@ services:
         "--workers 0",
       ]
 
-    # if you want debugging test - uncomment next line and insert name of db to second parameter and name of module to 4th
+    # if you want debugging test - insert name of db to second parameter and name of module to 4th
     # for run: docker-compose up tests-ptvsd
-    # after dont forget stop and remove container
+    # push Attach to running container
+    # after don't forget stop and remove container
 
-    command: ["-d", "origin", "-u", "my_library"]
+    command: ["-d", "odoo_test_new_3", "-u", "my_library", "--test-tags", "local_test"]

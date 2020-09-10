@@ -17,15 +17,23 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form>
-                <group>
+                <header>
+                    <button name="make_available" string="Make Available" type="object"/>
+                    <button name="make_lost" string="Make Lost" type="object"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="author_ids" widget="many2many_tags"/>
+                        <group>
+                            <field name="name"/>
+                            <field name="author_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="date_release"/>
+                            <field name="color" widget="int_color"/>
+                        </group>
                     </group>
-                    <group>
-                        <field name="date_published"/>
-                    </group>
-                </group>
+                </sheet>
             </form>
         </field>
     </record>
@@ -37,7 +45,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="date_published"/>
+                <field name="date_release"/>
             </tree>
         </field>
     </record>
