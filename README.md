@@ -9,6 +9,8 @@ cd vendor/odoo/cc
 
 git clone https://github.com/odoo/odoo.git
 
+cd odoo
+
 git checkout 12.0 OR git checkout 13.0
 
 Return to main directory (working_odoo_docker_12_13_py_3_7): cd ../../../..
