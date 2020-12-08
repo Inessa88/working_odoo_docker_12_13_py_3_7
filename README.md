@@ -25,7 +25,3 @@ Start debagger in VScode (button)
 
 Open in browser: odoo.localhost
 
-Use Odoo shell:
-start containers (odoo-ptvsd + proxy + mailhog + postgres)
-Come inside container odoo-ptvsd and run:
-./entrypoint.sh shell -d origin_odoo_12_2 # origin_odoo_12_2 is name of database to use the shell into
