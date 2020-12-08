@@ -58,7 +58,6 @@ services:
   # http://odoo.localhost
   odoo-ptvsd:
     <<: *default-odoo
-  build:
     image: pythongeek88/odoo_12_odoo_py37_vscode:latest
     entrypoint: ["/entrypoint.sh"]
     command: ["ptvsd", "--dev", "werkzeug"]
