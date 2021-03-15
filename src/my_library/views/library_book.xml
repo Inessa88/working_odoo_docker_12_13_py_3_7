@@ -13,6 +13,16 @@
     <field name="model">library.book</field>
     <field name="arch" type="xml">
         <form>
+            <header>
+                <button name="make_available" string="Make Available" type="object"/>
+                <button name="make_borrowed" string="Make Borrowed" type="object"/>
+                <button name="make_lost" string="Make Lost" type="object"/>
+                <button name="change_update_date" string="Update Date" type="object"/>
+                <button name="grouped_data" string="Groupped Data" type="object"/>
+                <button name="book_rent" string="Rent this book" type="object" class="btn-primary" groups="my_library.group_self_borrow"/>
+                <button name="return_all_books" string="Return all book" type="object" class="btn-primary" groups="my_library.group_self_borrow"/>
+                <button name="average_book_occupation" string="Log Average Occ." type="object" />
+            </header>
             <group>
                 <group>
                     <field name="name"/>
@@ -20,6 +30,8 @@
                     <field name="state"/>
                     <field name="pages"/>
                     <field name="notes"/>
+                    <field name="manager_remarks"/>
+                    <field name="old_edition" />
                 </group>
                 <group>
                     <field name="short_name"/>
@@ -30,6 +42,8 @@
                     <field name="cost_price"/>
                     <field name="currency_id"/>
                     <field name="retail_price"/>
+                    <field name="is_public" />
+                    <field name="private_notes" />
                 </group>
             </group>
             <group>
