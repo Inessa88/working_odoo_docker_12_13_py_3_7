@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='income_type_action' model='ir.actions.act_window'>
+        <field name="name">Income type</field>
+        <field name="res_model">income_type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="income_type_view_tree" model="ir.ui.view">
+        <field name="name">Income Type List</field>
+        <field name="model">income_type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='income_action' model='ir.actions.act_window'>
+        <field name="name">Income</field>
+        <field name="res_model">income</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="income_view_tree" model="ir.ui.view">
+        <field name="name">Income List</field>
+        <field name="model">income</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="date_receipt"/>
+                <field name="income_type_id"/>
+                <field name="amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="income_view_search" model="ir.ui.view">
+        <field name="name">Income Search</field>
+        <field name="model">income</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="income_type_id"/>
+                <field name="date_receipt"/>
+                <field name="amount"/>
+            </search>
+        </field>
+    </record>
+
+</odoo>
