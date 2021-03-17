@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem name="Home accounting" id="home_accounting_base_menu" />
+    <menuitem name="Incomes" id="income_menu" parent="home_accounting_base_menu" action="income_action"/>
+    <menuitem name="Expenses" id="expenses_menu" parent="home_accounting_base_menu" action="expenses_action"/>
+    <menuitem name="Expenses types" id="expenses_type_menu" parent="home_accounting_base_menu" action="expenses_type_action"/>    
+    <menuitem name="Income types" id="income_type_menu" parent="home_accounting_base_menu" action="income_type_action"/>
+
+</odoo>

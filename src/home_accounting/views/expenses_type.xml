@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='expenses_type_action' model='ir.actions.act_window'>
+        <field name="name">Expenses type</field>
+        <field name="res_model">expenses_type</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="expenses_type_view_tree" model="ir.ui.view">
+        <field name="name">Expenses Type List</field>
+        <field name="model">expenses_type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
