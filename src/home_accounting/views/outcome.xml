@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='outcome_action' model='ir.actions.act_window'>
+        <field name="name">Outcome</field>
+        <field name="res_model">outcome</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="outcome_view_tree" model="ir.ui.view">
+        <field name="name">Outcome</field>
+        <field name="model">outcome</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="currency_id_BYN" invisible="1"/>
+                <field name="outcome_BYN"/>
+                <field name="currency_id_USD" invisible="1"/>
+                <field name="outcome_USD"/>
+                <field name="currency_id_ILS" invisible="1"/>
+                <field name="outcome_ILS"/>
+                <field name="currency_id_RUB" invisible="1"/>
+                <field name="outcome_RUB"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -9,14 +9,20 @@
     'depends': ['base'],
     # This data files will be loaded at the installation (commented because file is not added in this example)
     'data': [
+
         'security/groups.xml',
         'security/ir.model.access.csv',
+
         'views/income.xml',
         'views/expenses.xml',
         'views/expenses_type.xml',
         'views/income_type.xml',
-        # 'views/outcome.xml',
+        'views/outcome.xml',
+        'views/currency_exchange.xml',
         'views/home_accounting.xml',
+        
+        'data/res_currency_data.xml',
+        'data/outcome_data.xml',
     ],
     'installable': True,
     'application': True,
