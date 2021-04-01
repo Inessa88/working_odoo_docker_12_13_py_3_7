@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id='income_action' model='ir.actions.act_window'>
-        <field name="name">Income</field>
-        <field name="res_model">income</field>
-        <field name="view_type">form</field>
-        <field name="view_mode">tree</field>
-    </record>
-
     <record id="income_view_tree" model="ir.ui.view">
         <field name="name">Income List</field>
         <field name="model">income</field>
@@ -15,7 +8,14 @@
             <tree editable="bottom">
                 <field name="date_receipt"/>
                 <field name="income_type_id"/>
-                <field name="amount"/>
+                <field name="currency_id_BYN" invisible="1"/>
+                <field name="amount_BYN"/>
+                <field name="currency_id_USD" invisible="1"/>
+                <field name="amount_USD"/>
+                <field name="currency_id_ILS" invisible="1"/>
+                <field name="amount_ILS"/>
+                <field name="currency_id_RUB" invisible="1"/>
+                <field name="amount_RUB"/>
             </tree>
         </field>
     </record>
@@ -27,9 +27,33 @@
             <search>
                 <field name="income_type_id"/>
                 <field name="date_receipt"/>
-                <field name="amount"/>
+                <field name="currency_id_BYN"/>
+                <field name="amount_BYN"/>
+                <field name="currency_id_USD"/>
+                <field name="amount_USD"/>
+                <field name="currency_id_ILS"/>
+                <field name="amount_ILS"/>
+                <field name="currency_id_RUB"/>
+                <field name="amount_RUB"/>
             </search>
         </field>
+    </record>
+
+    <record id="view_income_graph" model="ir.ui.view">
+        <field name="model">income</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="income_type_id"/>
+                <field name="amount_BYN" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id='income_action' model='ir.actions.act_window'>
+        <field name="name">Income</field>
+        <field name="res_model">income</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,graph</field>
     </record>
 
 </odoo>

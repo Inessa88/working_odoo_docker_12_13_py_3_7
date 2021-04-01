@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem name="Home accounting" id="home_accounting_base_menu" />
-    <menuitem name="Incomes" id="income_menu" parent="home_accounting_base_menu" action="income_action"/>
-    <menuitem name="Expenses" id="expenses_menu" parent="home_accounting_base_menu" action="expenses_action"/>
-    <menuitem name="Expenses types" id="expenses_type_menu" parent="home_accounting_base_menu" action="expenses_type_action"/>    
-    <menuitem name="Income types" id="income_type_menu" parent="home_accounting_base_menu" action="income_type_action"/>
-
+    <menuitem name="Home accounting" id="home_accounting_base_menu"/>
+    <menuitem name="Incomes" id="incomes_menu" parent="home_accounting_base_menu" sequence="1"/>
+    <menuitem name="Income" id="income_menu" parent="incomes_menu" action="income_action"/>
+    <menuitem name="Income types" id="income_type_menu" parent="incomes_menu" action="income_type_action"/>
+    <menuitem name="Expenses" id="expense_menu" parent="home_accounting_base_menu" sequence="2"/>
+    <menuitem name="Expenses" id="expenses_menu" parent="expense_menu" action="expenses_action"/>
+    <menuitem name="Expenses types" id="expenses_type_menu" parent="expense_menu" action="expenses_type_action"/>    
+    <menuitem name="Outcome" id="outcome_menu" parent="home_accounting_base_menu" action="outcome_action" sequence="6"/>
+    <menuitem name="Currency exchange" id="currency_exchange_menu" parent="home_accounting_base_menu" action="currency_exchange_action" sequence="5"/>
+    
 </odoo>

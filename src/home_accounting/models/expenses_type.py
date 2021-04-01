@@ -9,7 +9,7 @@ class ExpensesType(models.Model):
     _description = 'Expenses type'
 
     name = fields.Char(
-        string='Expenses type', 
+        string='Expenses type',
         required=True,
     )
     """ Название вида расходов """
