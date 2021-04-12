@@ -37,6 +37,13 @@ class CurrencyExchange(models.Model):
         )
     """ Сумма во второй валюте """
 
+    date_receipt = fields.Date(
+        string='Receipt Date',
+        required=True,
+        default=fields.Date.today()
+    )
+    """ Дата операции """
+
     @api.onchange('currency_1_id')
     def onchange_currency_1_id(self):
         if self.currency_1_id and self.currency_1_id == self.currency_2_id:

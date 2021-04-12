@@ -19,8 +19,10 @@
         'views/income_type.xml',
         'views/outcome.xml',
         'views/currency_exchange.xml',
+        'views/test_speed.xml',
+
         'views/home_accounting.xml',
-        
+                
         'data/res_currency_data.xml',
         'data/outcome_data.xml',
     ],

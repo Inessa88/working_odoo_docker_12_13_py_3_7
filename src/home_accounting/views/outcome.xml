@@ -14,14 +14,14 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="currency_id_BYN" invisible="1"/>
-                <field name="outcome_BYN"/>
-                <field name="currency_id_USD" invisible="1"/>
-                <field name="outcome_USD"/>
-                <field name="currency_id_ILS" invisible="1"/>
-                <field name="outcome_ILS"/>
-                <field name="currency_id_RUB" invisible="1"/>
-                <field name="outcome_RUB"/>
+                <field name="currency_id_byn" invisible="1"/>
+                <field name="outcome_byn"/>
+                <field name="currency_id_usd" invisible="1"/>
+                <field name="outcome_usd"/>
+                <field name="currency_id_ils" invisible="1"/>
+                <field name="outcome_ils"/>
+                <field name="currency_id_rub" invisible="1"/>
+                <field name="outcome_rub"/>
             </tree>
         </field>
     </record>

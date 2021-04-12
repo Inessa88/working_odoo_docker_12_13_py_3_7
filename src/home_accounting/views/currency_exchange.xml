@@ -13,9 +13,10 @@
         <field name="model">currency_exchange</field>
         <field name="arch" type="xml">
             <tree editable="bottom">
-                <field name="currency_1_id"/>
+                <field name="date_receipt"/>
+                <field name="currency_1_id" options="{'no_create': True}"/>
                 <field name="amount_1"/>
-                <field name="currency_2_id"/>
+                <field name="currency_2_id" options="{'no_create': True}"/>
                 <field name="amount_2"/>
             </tree>
         </field>

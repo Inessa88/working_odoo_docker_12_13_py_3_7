@@ -10,5 +10,6 @@
     <menuitem name="Expenses types" id="expenses_type_menu" parent="expense_menu" action="expenses_type_action"/>    
     <menuitem name="Outcome" id="outcome_menu" parent="home_accounting_base_menu" action="outcome_action" sequence="6"/>
     <menuitem name="Currency exchange" id="currency_exchange_menu" parent="home_accounting_base_menu" action="currency_exchange_action" sequence="5"/>
+    <menuitem name="Test Speed" id="test_speed" parent="home_accounting_base_menu" action="test_speed_action" groups="base.group_no_one" sequence="7"/>
     
 </odoo>

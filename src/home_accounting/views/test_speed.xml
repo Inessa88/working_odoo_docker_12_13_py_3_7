@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='test_speed_action' model='ir.actions.act_window'>
+        <field name="name">Test Speed</field>
+        <field name="res_model">test_speed</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <record id="test_speed_view_form" model="ir.ui.view">
+        <field name="name">Test Speed Form</field>
+        <field name="model">test_speed</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button name="create_test_data" type="object" string="Create 10" class="oe_highlight"
+                            context="{'record_number': 10,}"
+                    />
+                    <button name="create_test_data" type="object" string="Create 100" class="oe_highlight"
+                            context="{'record_number': 100,}"
+                    />
+                    <button name="create_test_data" type="object" string="Create 1000" class="oe_highlight"
+                            context="{'record_number': 1000,}"
+                    />
+                    <button name="create_test_data" type="object" string="Create 10000" class="oe_highlight"
+                            context="{'record_number': 10000,}"
+                    />
+                    <button name="create_test_data" type="object" string="Create 100000" class="oe_highlight"
+                            context="{'record_number': 100000,}"
+                    />
+                    <button name="delete_all_test_data" type="object" string="Delete all test data" class="oe_highlight"/>
+                </header>
+            </form>
+        </field>
+    </record>
+
+</odoo>
