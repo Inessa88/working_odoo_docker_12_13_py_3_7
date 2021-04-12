@@ -8,14 +8,14 @@
             <tree editable="bottom">
                 <field name="date_receipt"/>
                 <field name="income_type_id"/>
-                <field name="currency_id_BYN" invisible="1"/>
-                <field name="amount_BYN"/>
-                <field name="currency_id_USD" invisible="1"/>
-                <field name="amount_USD"/>
-                <field name="currency_id_ILS" invisible="1"/>
-                <field name="amount_ILS"/>
-                <field name="currency_id_RUB" invisible="1"/>
-                <field name="amount_RUB"/>
+                <field name="currency_id_byn" invisible="1"/>
+                <field name="amount_byn"/>
+                <field name="currency_id_usd" invisible="1"/>
+                <field name="amount_usd"/>
+                <field name="currency_id_ils" invisible="1"/>
+                <field name="amount_ils"/>
+                <field name="currency_id_rub" invisible="1"/>
+                <field name="amount_rub"/>
             </tree>
         </field>
     </record>
@@ -27,14 +27,14 @@
             <search>
                 <field name="income_type_id"/>
                 <field name="date_receipt"/>
-                <field name="currency_id_BYN"/>
-                <field name="amount_BYN"/>
-                <field name="currency_id_USD"/>
-                <field name="amount_USD"/>
-                <field name="currency_id_ILS"/>
-                <field name="amount_ILS"/>
-                <field name="currency_id_RUB"/>
-                <field name="amount_RUB"/>
+                <field name="currency_id_byn"/>
+                <field name="amount_byn"/>
+                <field name="currency_id_usd"/>
+                <field name="amount_usd"/>
+                <field name="currency_id_ils"/>
+                <field name="amount_ils"/>
+                <field name="currency_id_rub"/>
+                <field name="amount_rub"/>
             </search>
         </field>
     </record>
@@ -44,7 +44,7 @@
         <field name="arch" type="xml">
             <graph type="bar">
                 <field name="income_type_id"/>
-                <field name="amount_BYN" type="measure"/>
+                <field name="amount_byn" type="measure"/>
             </graph>
         </field>
     </record>
