@@ -71,6 +71,10 @@ class Outcome(models.Model):
             self.env.cr.execute(sql_query)
             result = self.env.cr.fetchall()
             all_incomes_byn, all_incomes_usd, all_incomes_ils, all_incomes_rub = result[0]
+            all_incomes_byn = all_incomes_byn or 0.0
+            all_incomes_usd = all_incomes_usd or 0.0
+            all_incomes_ils = all_incomes_ils or 0.0
+            all_incomes_rub = all_incomes_rub or 0.0
             # Определение сумм доходов по четырем валютам. Финальная строчка - это присвоение каждого элемента финального tuple каждой валюте.
             # Т.к. выводимый результат - это tuple, который содержит 4 цифры - доходы по каждой валюте.
             sql_query = """
@@ -82,6 +86,10 @@ class Outcome(models.Model):
             self.env.cr.execute(sql_query)
             result = self.env.cr.fetchall()
             all_expenses_byn, all_expenses_usd, all_expenses_ils, all_expenses_rub = result[0]
+            all_expenses_byn = all_expenses_byn or 0.0
+            all_expenses_usd = all_expenses_usd or 0.0
+            all_expenses_ils = all_expenses_ils or 0.0
+            all_expenses_rub = all_expenses_rub or 0.0
              # Определение сумм расходов по четырем валютам. Финальная строчка - это присвоение каждого элемента финального tuple каждой валюте.
             # Т.к. выводимый результат - это tuple, который содержит 4 цифры - расходы по каждой валюте.
             sql_query = """
