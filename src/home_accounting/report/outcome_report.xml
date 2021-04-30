@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="report_outcome_pdf"
+        name="home_accounting.outcome_template"
+        model="outcome"
+        string="Outcome report PDF"
+        report_type="qweb-pdf" />
+        
+    <report id="report_outcome_html"
+        name="home_accounting.outcome_template"
+        model="outcome"
+        string="Outcome report HTML"
+        report_type="qweb-html" />    
+</odoo>
