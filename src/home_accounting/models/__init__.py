@@ -5,3 +5,4 @@ from . import expenses
 from . import outcome
 from . import currency_exchange
 from . import test_speed
+from . import outcome_templates_report

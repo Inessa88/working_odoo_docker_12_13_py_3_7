@@ -14,6 +14,7 @@ class Outcome(models.Model):
     
     currency_id_byn = fields.Many2one(
         'res.currency', string='Currency BYN',
+        compute='_compute_outcome',
         )
 
     outcome_byn = fields.Monetary(
@@ -26,6 +27,7 @@ class Outcome(models.Model):
 
     currency_id_usd = fields.Many2one(
         'res.currency', string='Currency USD',
+        compute='_compute_outcome',
         )
 
     outcome_usd = fields.Monetary(
@@ -38,6 +40,7 @@ class Outcome(models.Model):
 
     currency_id_ils = fields.Many2one(
         'res.currency', string='Currency ILS',
+        compute='_compute_outcome',
         )
 
     outcome_ils = fields.Monetary(
@@ -50,6 +53,7 @@ class Outcome(models.Model):
 
     currency_id_rub = fields.Many2one(
         'res.currency', string='Currency RUB',
+        compute='_compute_outcome',
         )
 
     outcome_rub = fields.Monetary(
@@ -133,6 +137,10 @@ class Outcome(models.Model):
                 elif item[0] == self.env.ref('base.RUB').id:
                     amount_inc_rub = item[1]
             # Здесь определяем сумму увелечения валюты по каждой валюте. Тоже выбираем из list of tuples.
+            record.currency_id_byn = self.env.ref('base.BYN').id
+            record.currency_id_usd = self.env.ref('base.USD').id
+            record.currency_id_ils = self.env.ref('base.ILS').id
+            record.currency_id_rub = self.env.ref('base.RUB').id
             record.outcome_byn = all_incomes_byn - all_expenses_byn + amount_inc_byn - amount_dec_byn
             record.outcome_usd = all_incomes_usd - all_expenses_usd + amount_inc_usd - amount_dec_usd
             record.outcome_ils = all_incomes_ils - all_expenses_ils + amount_inc_ils - amount_dec_ils

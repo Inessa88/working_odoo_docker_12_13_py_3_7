@@ -9,7 +9,7 @@ class IncomeType(models.Model):
     _description = 'Income type'
 
     name = fields.Char(
-        string='Income_type',
+        string='Income type',
         required=True,
     )
 

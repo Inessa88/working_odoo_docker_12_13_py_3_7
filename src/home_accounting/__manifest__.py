@@ -25,6 +25,9 @@
                 
         'data/res_currency_data.xml',
         'data/outcome_data.xml',
+
+        'report/outcome_template.xml',
+        'report/outcome_report.xml',
     ],
     'installable': True,
     'application': True,

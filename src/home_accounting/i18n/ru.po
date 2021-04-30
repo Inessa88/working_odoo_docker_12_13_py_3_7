@@ -1,0 +1,364 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* home_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 15:28+0000\n"
+"PO-Revision-Date: 2021-04-29 15:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.outcome_template
+msgid "Amount"
+msgstr "Сумма"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__amount_byn
+#: model:ir.model.fields,field_description:home_accounting.field_income__amount_byn
+msgid "Amount BYN"
+msgstr "Сумма в бел. руб."
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__amount_ils
+#: model:ir.model.fields,field_description:home_accounting.field_income__amount_ils
+msgid "Amount ILS"
+msgstr "Сумма в изр. шекк."
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__amount_rub
+#: model:ir.model.fields,field_description:home_accounting.field_income__amount_rub
+msgid "Amount RUB"
+msgstr "Сумма в росс. руб."
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__amount_usd
+#: model:ir.model.fields,field_description:home_accounting.field_income__amount_usd
+msgid "Amount USD"
+msgstr "Сумма в долл. США"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.test_speed_view_form
+msgid "Create 10"
+msgstr "Создать 10"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.test_speed_view_form
+msgid "Create 100"
+msgstr "Создать 100"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.test_speed_view_form
+msgid "Create 1000"
+msgstr "Создать 1000"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.test_speed_view_form
+msgid "Create 10000"
+msgstr "Создать 10000"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.test_speed_view_form
+msgid "Create 100000"
+msgstr "Создать 100000"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__create_uid
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__create_uid
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__create_uid
+#: model:ir.model.fields,field_description:home_accounting.field_income__create_uid
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__create_uid
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__create_uid
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed__create_uid
+msgid "Created by"
+msgstr "Создано"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__create_date
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__create_date
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__create_date
+#: model:ir.model.fields,field_description:home_accounting.field_income__create_date
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__create_date
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__create_date
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed__create_date
+msgid "Created on"
+msgstr "Создан"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__currency_id_byn
+#: model:ir.model.fields,field_description:home_accounting.field_income__currency_id_byn
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__currency_id_byn
+msgid "Currency BYN"
+msgstr "Валюта бел. рубли"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__currency_id_ils
+#: model:ir.model.fields,field_description:home_accounting.field_income__currency_id_ils
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__currency_id_ils
+msgid "Currency ILS"
+msgstr "Валюта изр. шеккели"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__currency_id_rub
+#: model:ir.model.fields,field_description:home_accounting.field_income__currency_id_rub
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__currency_id_rub
+msgid "Currency RUB"
+msgstr "Валюта росс. рубли"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__currency_id_usd
+#: model:ir.model.fields,field_description:home_accounting.field_income__currency_id_usd
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__currency_id_usd
+msgid "Currency USD"
+msgstr "Валюта доллары США"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.currency_exchange_action
+#: model:ir.model,name:home_accounting.model_currency_exchange
+#: model:ir.ui.menu,name:home_accounting.currency_exchange_menu
+msgid "Currency exchange"
+msgstr "Обмен валют"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.test_speed_view_form
+msgid "Delete all test data"
+msgstr "Удалить все тестовые данные"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_income__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_report_home_accounting_outcome_template__display_name
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed__display_name
+msgid "Display Name"
+msgstr "Отображаемое Имя"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.expenses_action
+#: model:ir.model,name:home_accounting.model_expenses
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__expenses_type_id
+#: model:ir.ui.menu,name:home_accounting.expense_menu
+#: model:ir.ui.menu,name:home_accounting.expenses_menu
+msgid "Expenses"
+msgstr "Расходы"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.outcome_template
+msgid "Expenses Type"
+msgstr "Вид Расходов"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.expenses_type_action
+#: model:ir.model,name:home_accounting.model_expenses_type
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__name
+msgid "Expenses type"
+msgstr "Вид расходов"
+
+#. module: home_accounting
+#: sql_constraint:expenses_type:0
+msgid "Expenses type must be unique."
+msgstr "Вид расходов должные быть уникальным"
+
+#. module: home_accounting
+#: model:ir.ui.menu,name:home_accounting.expenses_type_menu
+msgid "Expenses types"
+msgstr "Виды расходов"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__currency_1_id
+msgid "First currency"
+msgstr "Первая валюта"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__amount_1
+msgid "First currency amount"
+msgstr "Сумма в первой валюте"
+
+#. module: home_accounting
+#: model:ir.ui.menu,name:home_accounting.home_accounting_base_menu
+#: model:res.groups,name:home_accounting.group_home_accounting
+msgid "Home accounting"
+msgstr "Домашняя бухгалтерия"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__id
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__id
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__id
+#: model:ir.model.fields,field_description:home_accounting.field_income__id
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__id
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__id
+#: model:ir.model.fields,field_description:home_accounting.field_report_home_accounting_outcome_template__id
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed__id
+msgid "ID"
+msgstr "Номер"
+
+#. module: home_accounting
+#: code:addons/home_accounting/models/expenses_type.py:28
+#, python-format
+msgid "In order to delete an expenses type, you must first delete an expenses item."
+msgstr "Чтобы удалить вид расхода, вы должны удалить его из Расходов"
+
+#. module: home_accounting
+#: code:addons/home_accounting/models/income_type.py:27
+#, python-format
+msgid "In order to delete an income type, you must first delete income item."
+msgstr "Чтобы удалить вид дохода, вы должны удалить его из Доходов"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.income_action
+#: model:ir.model,name:home_accounting.model_income
+#: model:ir.model.fields,field_description:home_accounting.field_income__income_type_id
+#: model:ir.ui.menu,name:home_accounting.income_menu
+msgid "Income"
+msgstr "Доходы"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.outcome_template
+msgid "Income Type"
+msgstr "Вид Дохода"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.income_type_action
+#: model:ir.model,name:home_accounting.model_income_type
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__name
+msgid "Income type"
+msgstr "Вид дохода"
+
+#. module: home_accounting
+#: sql_constraint:income_type:0
+msgid "Income type must be unique."
+msgstr "Вид дохода должен быть уникальным"
+
+#. module: home_accounting
+#: model:ir.ui.menu,name:home_accounting.income_type_menu
+msgid "Income types"
+msgstr "Виды доходов"
+
+#. module: home_accounting
+#: model:ir.ui.menu,name:home_accounting.incomes_menu
+msgid "Incomes"
+msgstr "Доходы"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_expenses____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_income____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_income_type____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_outcome____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_report_home_accounting_outcome_template____last_update
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed____last_update
+msgid "Last Modified on"
+msgstr "Последнее изменение"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__write_uid
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__write_uid
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__write_uid
+#: model:ir.model.fields,field_description:home_accounting.field_income__write_uid
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__write_uid
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__write_uid
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed__write_uid
+msgid "Last Updated by"
+msgstr "Последний раз обновил"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__write_date
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__write_date
+#: model:ir.model.fields,field_description:home_accounting.field_expenses_type__write_date
+#: model:ir.model.fields,field_description:home_accounting.field_income__write_date
+#: model:ir.model.fields,field_description:home_accounting.field_income_type__write_date
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__write_date
+#: model:ir.model.fields,field_description:home_accounting.field_test_speed__write_date
+msgid "Last Updated on"
+msgstr "Последнее обновление"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__name
+msgid "Name"
+msgstr "Название"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.outcome_action
+#: model:ir.model,name:home_accounting.model_outcome
+#: model:ir.ui.menu,name:home_accounting.outcome_menu
+msgid "Outcome"
+msgstr "Результат"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__outcome_byn
+msgid "Outcome BYN"
+msgstr "Результат в бел. руб."
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__outcome_ils
+msgid "Outcome ILS"
+msgstr "Результат в изр. шекк."
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__outcome_rub
+msgid "Outcome RUB"
+msgstr "Результат в росс. руб."
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_outcome__outcome_usd
+msgid "Outcome USD"
+msgstr "Результат в долл. США"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.outcome_template
+msgid "Outcome on my account:"
+msgstr "Результат на моем счету"
+
+#. module: home_accounting
+#: model:ir.actions.report,name:home_accounting.report_outcome
+msgid "Outcome report"
+msgstr "Итоговый отчет"
+
+#. module: home_accounting
+#: model:ir.model,name:home_accounting.model_report_home_accounting_outcome_template
+msgid "Outcome template report"
+msgstr "Шаблон итогового отчета"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__date_receipt
+#: model:ir.model.fields,field_description:home_accounting.field_expenses__date_receipt
+#: model:ir.model.fields,field_description:home_accounting.field_income__date_receipt
+msgid "Receipt Date"
+msgstr "Дата операции"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__currency_2_id
+msgid "Second currency"
+msgstr "Вторая валюта"
+
+#. module: home_accounting
+#: model:ir.model.fields,field_description:home_accounting.field_currency_exchange__amount_2
+msgid "Second currency amount"
+msgstr "Сумма во второй валюте"
+
+#. module: home_accounting
+#: model_terms:ir.ui.view,arch_db:home_accounting.outcome_template
+msgid "Structure"
+msgstr "Структура"
+
+#. module: home_accounting
+#: model:ir.actions.act_window,name:home_accounting.test_speed_action
+#: model:ir.ui.menu,name:home_accounting.test_speed
+msgid "Test Speed"
+msgstr "Тест скорости"
+
+#. module: home_accounting
+#: model:ir.model,name:home_accounting.model_test_speed
+msgid "Test final outcome calculation speed "
+msgstr "Тест скорости расчета итогового результата"
