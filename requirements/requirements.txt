@@ -52,7 +52,7 @@ vatnumber==1.2
 vobject==0.9.6.1
 websocket-client
 Werkzeug==0.15.3
-wheel==0.34.2
+wheel==0.38.1
 xlrd==1.1.0
 XlsxWriter==1.1.2
 xlwt==1.3.*
